@@ -60,7 +60,7 @@ def helpMessage() {
     
      Help:
       --help                        Will print out summary above when executing nextflow run uct-cbio/16S-rDNA-dada2-pipeline
-    """.stripIndent()
+    """
 }
 
 /*
