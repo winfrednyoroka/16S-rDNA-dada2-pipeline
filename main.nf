@@ -164,7 +164,7 @@ process runFastQC {
         file("${pairId}_fastqc/*.zip") into fastqc_files
 
     """
-    hostname > debug.log
+    hostname >> /researchdata/fhgfs/katie/dada2-test/raw_testdata/debug.log
     mkdir ${pairId}_fastqc
     fastqc --outdir ${pairId}_fastqc \
     ${in_fastq.get(0)} \
