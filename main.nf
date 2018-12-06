@@ -220,7 +220,7 @@ process filterAndTrim {
                         maxEE = c(${params.maxEEFor},${params.maxEERev}),
                         truncQ = ${params.truncQ},
                         maxN = ${params.maxN},
-                        rm.phix = FALSE,
+                        rm.phix = rm.phix,
                         maxLen = ${params.maxLen},
                         minLen = ${params.minLen},
                         compress = TRUE,
