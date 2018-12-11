@@ -1,4 +1,4 @@
-FROM bioconductor/release_core2
+FROM bioconductor/devel_core2
 
 LABEL project="dada2"
 LABEL version="release"
