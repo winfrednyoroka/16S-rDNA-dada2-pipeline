@@ -20,9 +20,6 @@ RUN apt-get update && \
         wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip
-RUN pip install --upgrade virtualenv
-
 RUN mkdir -p /usr/local/lib/R/site-library
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
