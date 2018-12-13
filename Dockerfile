@@ -26,8 +26,6 @@ RUN pip install --upgrade virtualenv
 RUN mkdir -p /usr/local/lib/R/site-library
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
-RUN R -e 'install.packages(c("RCurl","phangorn","dplyr"), dependencies=TRUE)'
-RUN R -e 'if (!requireNamespace("BiocManager")) install.packages("BiocManager");BiocManager::install(); BiocManager::install("dada2"); BiocManager::install("DECIPHER"); BiocManager::install("biomformat")'
 
 CMD ["R"]
 
