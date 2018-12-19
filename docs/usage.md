@@ -126,7 +126,7 @@ Each step in the pipeline has a default set of requirements for number of CPUs, 
 ### Custom resource requests
 Wherever process-specific requirements are set in the pipeline, the default value can be changed by creating a custom config file. See the files in [`conf`](../conf) for examples.
 
-## General line parameters
+## General command line options
 ### `--outdir`
 The output directory where the results will be saved.
 
@@ -160,7 +160,7 @@ process.$fastqc.errorStrategy = 'terminate'
 
 ### `--max_memory`
 Use to set a top-limit for the default memory requirement for each process.
-Should be a string in the format integer-unit. eg. `--max_memory '8.GB'``
+Should be a string in the format integer-unit. eg. `--max_memory '8.GB'`
 
 ### `--max_time`
 Use to set a top-limit for the default time requirement for each process.
@@ -174,6 +174,6 @@ Should be a string in the format integer-unit. eg. `--max_cpus 1`
 Set to receive plain-text e-mails instead of HTML formatted.
 
 ### `--clusterOptions`
-Submit arbitrary cluster scheduler options (not available for all config profiles). For instance, you could use `--clusterOptions '-p devcore'` to run on the development node (though won't work with default process time requests).
+The nextflow clusterOptions directive allows the usage of any native configuration option accepted by your cluster submit command. You can use it to request non-standard resources or use settings that are specific to your cluster and not supported out of the box by Nextflow. 
 
 
