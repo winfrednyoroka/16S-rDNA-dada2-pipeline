@@ -1,9 +1,11 @@
-# uct-cbio/16S-rDNA-dada2-pipeline Usage
+# Pipeline usage
 
 ## General Nextflow info
-Nextflow handles job submissions on different environments (PBS in our case), and supervises running the jobs. Thus the Nextflow process must run until the pipeline is finished. We recommend that you put the process running in the background through `screen` / `tmux` or similar tool. Alternatively you can run nextflow within a cluster job submitted your job scheduler.
+Nextflow handles job submissions on different environments (PBS in our case), and supervises running the jobs. Thus the Nextflow process must run until the pipeline is finished. We recommend that you put the process running in the background through `screen` or a similar tool. 
 
-It is recommended to limit the Nextflow Java virtual machines memory. We recommend adding the following line to your environment (typically in `~/.bashrc` or `~./bash_profile`):
+On UCT's hex cluster you would start a `screen` session from the headnode and then start and interactive job. Once you are on a worker node you can enter the typical command for running the pipeline specified below.
+
+It is recommended that you limit the Nextflow Java virtual machine's memory usage by adding the following line to your environment (typically in `~/.bashrc` or `~./bash_profile`):
 
 ```bash
 NXF_OPTS='-Xms1g -Xmx4g'
