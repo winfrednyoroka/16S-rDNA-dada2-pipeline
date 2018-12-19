@@ -1,3 +1,4 @@
+# ![kviljoen/16S-rDNA-dada2-pipeline](/assets/cbio_logo.png)
 # Pipeline usage
 
 ## General Nextflow info
@@ -176,8 +177,3 @@ Set to receive plain-text e-mails instead of HTML formatted.
 Submit arbitrary cluster scheduler options (not available for all config profiles). For instance, you could use `--clusterOptions '-p devcore'` to run on the development node (though won't work with default process time requests).
 
 
----
-
-[![UCT CBIO](/conf/cbio_logo.png)](http://www.cbio.uct.ac.za/)
-
----
